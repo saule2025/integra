@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Read" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "application" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">	
+			<h4>{{ application.user }}</h4>			
+			<h5>{{ application.user.first_name }} {{ application.user.last_name }}</h5>			
+			<h5>{{ application.user.email }}</h5>			
+		</div>
+		<div class="card-body">
+			<p>{{ application.datea  | date:"d.m.Y H:i" }}</p>	
+			<p><strong>{% trans "title" %}</strong>: {{ application.title }}</p>			
+			<p><strong>{% trans "details" %}</strong>: {{ application.details }}</p>			
+		</div>
+		<div class="card-footer">
+			<h4>{% trans "movement" %}</h4>
+			{% if movement.count > 0 %}
+				<table class="cell-border hover stripe" style="width:100%">
+					<thead>	
+						<tr>
+							<th><p>{% trans "datem" %}</p></th>
+							<th><p>{% trans "status" %}</p></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for p in movement %}
+						<tr>
+							<td>
+								<p>{{ p.datem | date:"d.m.Y H:i"}}</p>
+							</td>
+							<td>
+								<p>{{ p.status }}</p>
+							</td>							
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			{% endif %}			
+		</div>	
+	</div>			
+	<div class="row justify-content-center">
+		<a class="btn btn-outline-info" style="width:120px" onclick="history.back();">{% trans "Back" %}</a>    	
+	</div>
+</div>
+{% endblock content %}

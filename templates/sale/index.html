@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "sales" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div id="print_content">
+	<h2>{% trans "sales" %}</h2>
+	<p><a href="{% url 'sale_create' %}">{% trans "Add" %}</a></p>
+	<hr>
+	{% if sale.count > 0 %}
+	<div class="row">
+		<table id="myTable" class="table-manager" style="width:100%; margin: 10px">
+			<thead>
+				<tr>
+					<th><p>{% trans "dates" %}</p></th>
+					<th><p>{% trans "catalog_category" %}</p></th>
+					<th><p>{% trans "catalog_title" %}</p></th>
+					<th><p>{% trans "catalog_price" %}</p></th>
+					<th><p>{% trans "client" %}</p></th>
+					<th><p>{% trans "employee" %}</p></th>										
+					<th><p></p></th>					
+				</tr>
+			</thead>
+			<tbody>
+				{% for p in sale %}
+				<tr>	
+					<td>
+						<p>{{ p.dates | date:"d.m.Y H:i" }}</p>
+					</td>
+					<td>
+						<p>{{ p.catalog.category }}</p>
+					</td>
+					<td>
+						<p>{{ p.catalog.title }}</p>
+					</td>				
+					<td>
+						<p>{{ p.catalog.price | stringformat:"1.0f" }} 〒</p>
+					</td>
+					<td>
+						<p>{{ p.client }}</p>
+					</td>
+					<td>
+						<p>{{ p.employee }} ₽</p>
+					</td>
+					<td>
+						<p>
+							<a href="{% url 'sale_edit' p.id %}">{% trans "Change" %}</a> |
+							<a href="{% url 'sale_read' p.id %}">{% trans "View" %}</a> |
+							<a onclick="return confirm('Удалить запись?')" href="{% url 'sale_delete' p.id %}">{% trans "Delete" %}</a>
+						</p>
+					</td>												
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	{% endif %}
+</div>		
+	
+<script>
+	function printDiv(divName) {
+		// Печать контейнера div
+		// Оригинальный контент
+		var originalContents = document.body.innerHTML;
+		// Скрываемый класс
+		var collection = document.getElementsByClassName("hide_for_print_element");
+		for(var i=0; i<collection.length; i++)collection[i].style.display='none';
+		// Область печати
+		var printContents = document.getElementById(divName).innerHTML;
+		// Вывод на печать			
+		document.body.innerHTML = printContents;
+		window.print();
+		// Возврат документа в исходное состояние
+		document.body.innerHTML = originalContents;
+	}
+</script>	
+{% endblock content %}
+

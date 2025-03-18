@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">
+			<h4>Гостиничный Бизнес</h4>			
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-8">				
+					<p>Программное обеспечение для автоматизации гостиницы. Удобное, мощное решение для гостиницы, пансионата, дома отдыха. Программу отличает, простой в освоении интерфейс пользователя, высокая производительность и гибкость настроек.</p>
+					<p>Совместное с фирмой 1С программное обеспечение для автоматизации гостиницы на платформе 1С:Предприятие 8</p>
+					<p>Программа автоматизирует:</p>
+					<ul>
+						<li>рабочие места портье (администратора),</li>
+						<li>менеджера отдела бронирования,</li>
+						<li>супервайзера службы номерного фонда,</li>
+						<li>менеджера службы бронирования конференц-залов,</li>
+						<li>сотрудника планово-экономической службы.</li>
+					</ul>
+					<p>Программа интегрируется c</p>
+					<ul>
+						<li>«1С:Бухгалтерией»,</li>
+						<li>фронт-офисом ресторана,</li>
+						<li>системами тарификации телефонных разговоров и Интернет,</li>
+						<li>платного телевидения.</li>
+					</ul>
+					<p>Позволяет построить единую учетную систему.</p>
+				</div>
+				<div class="col-md-4">
+					<div class="row">			
+						<img class="img-center" src="{% static 'images/service6.jpg' %}" alt="logo">
+					</div>	
+				</div>
+			</div>				
+		</div>
+		<div class="card-footer">				
+		</div>		
+	</div>
+	<div class="div-button-center">
+		<a class="btn btn-outline-info" style="width:120px; margin: 2px;" onclick="history.back()">{% trans "Back" %}</a>    	
+	</div>		
+</div>
+
+{% endblock content %}

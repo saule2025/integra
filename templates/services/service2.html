@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">
+			<h4>Автоматизация Торговли</h4>			
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-8">				
+					<p>Автоматизация магазинов розничной торговли на базе 1С:Розница 8</p>
+					<p>Прикладное решение “1C: Розница 8″ предназначено для автоматизации торговой деятельности магазинов и других розничных торговых точек, в том числе объединенных в торговую сеть. “1С:Розница 8″ автоматизирует бизнес-процессы розничных продаж. Для автоматизации других направлений деятельности предприятия, таких как безналичные денежные расчеты, взаиморасчеты с контрагентами, планирование и бюджетирование, управление отношениями с клиентами, управление персоналом, бухгалтерский и управленческий учет и т. п., предназначены другие решения, входящие в систему “1С:Предприятие 8″:</p>					
+				</div>
+				<div class="col-md-4">
+					<div class="row">			
+						<img class="img-center" src="{% static 'images/service2.jpg' %}" alt="logo">
+					</div>	
+				</div>
+			</div>				
+		</div>
+		<div class="card-footer">				
+		</div>		
+	</div>
+	<div class="div-button-center">
+		<a class="btn btn-outline-info" style="width:120px; margin: 2px;" onclick="history.back()">{% trans "Back" %}</a>    	
+	</div>		
+</div>
+
+{% endblock content %}

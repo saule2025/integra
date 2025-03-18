@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">
+			<h4>Настройка и Внедрение 1С</h4>			
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-8">				
+					<p>Базовый функционал программы 1С:Предприятие 8 уже при первичной разработке обладает достаточным количеством пользовательских типовых решений для эффективной работы бизнеса в разных отраслях. Но для более сложного программного обеспечения и высокого результата важно настроить 1С предприятие в соответствии с функциональными контурами конкретно вашей организации. В наш пакет услуг входит доработка продукта с учётом дополнительных возможностей, настройка интеграции 1С с другими программами, настройка регистров, счетов, шаблонов, печатных форм или справочников. Наша компания поможет вам настроить 1С таким образом, чтобы удовлетворить все потребности вашего бизнеса.</p>					
+				</div>
+				<div class="col-md-4">
+					<div class="row">			
+						<img class="img-center" src="{% static 'images/service1.jpg' %}" alt="logo">
+					</div>	
+				</div>
+			</div>				
+		</div>
+		<div class="card-footer">				
+		</div>		
+	</div>
+	<div class="div-button-center">
+		<a class="btn btn-outline-info" style="width:120px; margin: 2px;" onclick="history.back()">{% trans "Back" %}</a>    	
+	</div>		
+</div>
+
+{% endblock content %}
