@@ -80,65 +80,65 @@ def contact(request):
 
 # Сервисы
 def service1(request):
-    return render(request, "services\service1.html")
+    return render(request, "services/service1.html")
     # try:
-    #     return render(request, "services\service1.html")
+    #     return render(request, "service/service1.html")
     # except Exception as exception:
     #     print(exception)
     #     return HttpResponse(exception)
 
 def service2(request):
     try:
-        return render(request, "services\service2.html")
+        return render(request, "services/service2.html")
     except Exception as exception:
         print(exception)
         return HttpResponse(exception)
 
 def service3(request):
     try:
-        return render(request, "services\service3.html")
+        return render(request, "services/service3.html")
     except Exception as exception:
         print(exception)
         return HttpResponse(exception)
 
 def service4(request):
     try:
-        return render(request, "services\service4.html")
+        return render(request, "services/service4.html")
     except Exception as exception:
         print(exception)
         return HttpResponse(exception)
 
 def service5(request):
     try:
-        return render(request, "services\service5.html")
+        return render(request, "services/service5.html")
     except Exception as exception:
         print(exception)
         return HttpResponse(exception)
 
 def service6(request):
     try:
-        return render(request, "services\service6.html")
+        return render(request, "services/service6.html")
     except Exception as exception:
         print(exception)
         return HttpResponse(exception)
 
 def service7(request):
     try:
-        return render(request, "services\service7.html")
+        return render(request, "services/service7.html")
     except Exception as exception:
         print(exception)
         return HttpResponse(exception)
 
 def service8(request):
     try:
-        return render(request, "services\service8.html")
+        return render(request, "services/service8.html")
     except Exception as exception:
         print(exception)
         return HttpResponse(exception)
 
 def service9(request):
     try:
-        return render(request, "services\service9.html")
+        return render(request, "services/service9.html")
     except Exception as exception:
         print(exception)
         return HttpResponse(exception)
