@@ -1,0 +1,308 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "App Name" %}{% endblock title %}
+{% block header %}
+
+{% endblock header %}
+{% block content %}
+
+<style>
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin: 10px;
+}
+.text-center {
+  text-align: center;
+  text-color: Gold;
+  margin: 1px;
+  padding: 5px;
+  height: 200px;
+  background-color: DarkMagenta;
+}
+.text-center h3{
+  color: Gold;
+}
+.text-center p{
+  color: Gold;
+}
+</style>
+
+<div class="div-width-100-text-center">
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h1>"Integra Soft" ЖШС</h1>
+	{% else %}
+		<h1>ТОО «Integra Soft»</h1>
+	{% endif %}
+</div>
+<div class="row" style="margin-top: 10px">
+	{% if LANGUAGE_CODE == 'kk' %}
+		<p>"Integra Soft" ЖШС 2007 жылғы тамызда әртүрлі салалық бағыттағы кәсіпорындардың қызметін автоматтандыру және жергілікті желілер мен серверлерді техникалық қолдау бойынша кешенді қызметтер көрсету үшін құрылды.</p>
+		<p>Біз бағалау мен есепке алудың заманауи әдістеріне назар аударамыз және "1С:Кәсіпорын 8"БҚ базасында қажетті функционалы бар шешімдерді ұсынамыз. Біз өз жұмысымызда кәсіпорынның "ат тұжырымдамасын" анықтау үшін кешенді тәсілді қолданамыз және компанияның бизнес мақсаттарына жету жолдарын, ықтимал тәуекелдерді азайтуды, есеп саясатын құру нұсқаларын және ақпараттық қамтамасыз ету қажеттіліктерін ұсынамыз. Сондай-ақ," ат тұжырымдамасы " ақпараттық қауіпсіздік талаптарын, деректер базасына қол жеткізу жылдамдығын, сондай-ақ аталған барлық аспектілерді компанияның бірыңғай ақпараттық контурына жабуды қамтиды.</p>
+	{% else %}
+		<p>ТОО «Integra Soft» была создана в августе 2007г. для оказания комплексных услуг по автоматизации деятельности предприятий различной отраслевой направленности и технической поддержки локальных сетей и серверов.</p>
+		<p>Мы ориентируемся на современные методики оценки и учета, и предлагаем решения с необходимым функционалом на базе ПО «1С:Предприятие 8». В своей работе мы применяем комплексный подход для определения, так называемой, «ИТ-концепции» предприятия и предлагаем пути достижения бизнес-целей компании, сокращения возможных рисков, варианты построения учетной политики и потребностей в информационном обеспечении. Также «ИТ-концепция» включает требования информационной безопасности, скорости доступа к базам данным, а также замыкание всех перечисленных аспектов в единый информационный контур компании.</p>
+	{% endif %}
+</div>
+<hr>
+<div class="div-width-100-text-center">
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h1>Қызметтер</h1>
+	{% else %}
+		<h1>Услуги</h1>
+	{% endif %}
+</div>
+<div class="row" style="margin-top: 10px">
+	<div class="col-lg-4 col-md-6 thumb" style="margin-top: 5px;">
+		<div class="card-header">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<h4>1С орнату және енгізу<h4>
+			{% else %}
+				<h4>Настройка и Внедрение 1С<h4>
+			{% endif %}
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<img class="img-center" src="{% static 'images/service1.jpg' %}" alt="service">
+			</div>
+		</div>
+		<div class="card-footer">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<p><a href="{% url 'service1' %}">Толығырақ</a></p>
+			{% else %}
+				<p><a href="{% url 'service1' %}">Подробнее</a></p>
+			{% endif %}
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-6 thumb" style="margin-top: 5px;">
+		<div class="card-header">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<h4>Сауданы Автоматтандыру<h4>
+			{% else %}
+				<h4>Автоматизация Торговли<h4>
+			{% endif %}
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<img class="img-center" src="{% static 'images/service2.jpg' %}" alt="service">
+			</div>
+		</div>
+		<div class="card-footer">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<p><a href="{% url 'service2' %}">Толығырақ</a></p>
+			{% else %}
+				<p><a href="{% url 'service2' %}">Подробнее</a></p>
+			{% endif %}
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-6 thumb" style="margin-top: 5px;">
+		<div class="card-header">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<h4>Медицинаны Автоматтандыру<h4>
+			{% else %}
+				<h4>Автоматизация Медицины<h4>
+			{% endif %}
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<img class="img-center" src="{% static 'images/service3.jpg' %}" alt="service">
+			</div>
+		</div>
+		<div class="card-footer">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<p><a href="{% url 'service3' %}">Толығырақ</a></p>
+			{% else %}
+				<p><a href="{% url 'service3' %}">Подробнее</a></p>
+			{% endif %}
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-6 thumb" style="margin-top: 5px;">
+		<div class="card-header">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<h4>Мейрамхана Бизнесі<h4>
+			{% else %}
+				<h4>Ресторанный Бизнес<h4>
+			{% endif %}
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<img class="img-center" src="{% static 'images/service4.jpg' %}" alt="service">
+			</div>
+		</div>
+		<div class="card-footer">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<p><a href="{% url 'service4' %}">Толығырақ</a></p>
+			{% else %}
+				<p><a href="{% url 'service4' %}">Подробнее</a></p>
+			{% endif %}
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-6 thumb" style="margin-top: 5px;">
+		<div class="card-header">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<h4>Автокөлік<h4>
+			{% else %}
+				<h4>Автотранспорт<h4>
+			{% endif %}
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<img class="img-center" src="{% static 'images/service5.jpg' %}" alt="service">
+			</div>
+		</div>
+		<div class="card-footer">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<p><a href="{% url 'service5' %}">Толығырақ</a></p>
+			{% else %}
+				<p><a href="{% url 'service5' %}">Подробнее</a></p>
+			{% endif %}
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-6 thumb" style="margin-top: 5px;">
+		<div class="card-header">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<h4>Қонақ Үй Бизнесі<h4>
+			{% else %}
+				<h4>Гостиничный Бизнес<h4>
+			{% endif %}
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<img class="img-center" src="{% static 'images/service6.jpg' %}" alt="service">
+			</div>
+		</div>
+		<div class="card-footer">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<p><a href="{% url 'service6' %}">Толығырақ</a></p>
+			{% else %}
+				<p><a href="{% url 'service6' %}">Подробнее</a></p>
+			{% endif %}
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-6 thumb" style="margin-top: 5px;">
+		<div class="card-header">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<h4>Сұлулық салондары<h4>
+			{% else %}
+				<h4>Салоны красоты<h4>
+			{% endif %}
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<img class="img-center" src="{% static 'images/service7.jpg' %}" alt="service">
+			</div>
+		</div>
+		<div class="card-footer">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<p><a href="{% url 'service7' %}">Толығырақ</a></p>
+			{% else %}
+				<p><a href="{% url 'service7' %}">Подробнее</a></p>
+			{% endif %}
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-6 thumb" style="margin-top: 5px;">
+		<div class="card-header">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<h4>АТС<h4>
+			{% else %}
+				<h4>ИТС<h4>
+			{% endif %}
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<img class="img-center" src="{% static 'images/service8.jpg' %}" alt="service">
+			</div>
+		</div>
+		<div class="card-footer">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<p><a href="{% url 'service8' %}">Толығырақ</a></p>
+			{% else %}
+				<p><a href="{% url 'service8' %}">Подробнее</a></p>
+			{% endif %}
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-6 thumb" style="margin-top: 5px;">
+		<div class="card-header">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<h4>1С үшін мобильді шешім<h4>
+			{% else %}
+				<h4>Мобильное Решение Для 1С<h4>
+			{% endif %}
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<img class="img-center" src="{% static 'images/service9.jpg' %}" alt="service">
+			</div>
+		</div>
+		<div class="card-footer">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<p><a href="{% url 'service9' %}">Толығырақ</a></p>
+			{% else %}
+				<p><a href="{% url 'service9' %}">Подробнее</a></p>
+			{% endif %}
+		</div>
+	</div>
+</div>
+<hr>
+{% if news13.count > 0 %}
+	<div class="div-width-100-text-center">
+		{% if LANGUAGE_CODE == 'kk' %}
+			<h1>Жаңалықтар</h1>
+		{% else %}
+			<h1>Новости</h1>
+		{% endif %}
+	</div>
+	<div class="row">
+		{% for n in news13 %}
+			<!-- <div class="card"> -->
+			<div class="col-lg-3 col-md-4 col-6 thumb" style="margin-top: 5px;">
+				<div class="card-header">
+					<p>{{ n.daten | date:"d.m.Y H:i" }}<p>
+				</div>
+				<div class="card-body">
+					<div class="row">
+						{% if n.id == 1 %}
+							<img style="width:100%; max-width:600px;" src="{% static 'images/news1.jpg' %}" alt="{{ n.photo.url }}">
+						{% elif n.id == 2 %}
+							<img style="width:100%; max-width:600px;" src="{% static 'images/news2.jpg' %}" alt="{{ n.photo.url }}">
+						{% elif n.id == 3 %}
+							<img style="width:100%; max-width:600px;" src="{% static 'images/news3.jpg' %}" alt="{{ n.photo.url }}">
+						{% elif n.id == 4 %}
+							<img style="width:100%; max-width:600px;" src="{% static 'images/news4.jpg' %}" alt="{{ n.photo.url }}">
+						{% elif n.id == 5 %}
+							<img style="width:100%; max-width:600px;" src="{% static 'images/news5.jpg' %}" alt="{{ n.photo.url }}">
+						{% elif n.id == 6 %}
+							<img style="width:100%; max-width:600px;" src="{% static 'images/news6.jpg' %}" alt="{{ n.photo.url }}">
+						{% elif n.id == 7 %}
+							<img style="width:100%; max-width:600px;" src="{% static 'images/news7.jpg' %}" alt="{{ n.photo.url }}">
+						{% else %}
+							{% if n.photo.url != None %}
+								<img style="width:100%; max-width:600px;" src="{{ n.photo.url}}" alt="{{ n.photo.url }}">
+							{% endif %}
+						{% endif %}
+					</div>
+					<!-- <div class="row"> -->
+						<!-- <div class="col-md-8"> -->
+							<!-- <p>{{ n.details | linebreaks }}</p> -->
+						<!-- </div>								 -->
+						<!-- <div class="col-md-4"> -->
+							<!-- {% if n.photo.url != None %} -->
+								<!-- <img style="width:100%; max-width:400px;" src="{{ n.photo.url}}" alt="{{ n.photo.url }}"> -->
+							<!-- {% endif %} -->
+						<!-- </div> -->
+					<!-- </div> -->
+				</div>
+				<div class="card-footer">
+					<h5><a href="{% url 'news_read' n.id %}">{{ n.title }}</a></h5>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endif %}
+
+
+{% endblock content %}
+
